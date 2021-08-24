@@ -1,25 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
+import { Typography } from "@material-ui/core";
+import "./App.css";
+import FormOnboard from "./components/FormOnboard";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+function aoEnviarForm(dados) {
+  console.log(dados);
 }
 
-export default App;
+function validarCPF(cpfSocio) {
+  if (cpfSocio.length != 11) {
+    return { valido: false, texto: "CPF deve ter 11 digitos" };
+  } else {
+    return { valido: true, texto: "" };
+  }
+}
+
+export default function App() {
+  return (
+    <>
+      <header>
+        <link rel="preconnect" href="https://fonts.gstatic.com" />
+        <title>Cadastro</title>
+        <link
+          href="https://fonts.googleapis.com/css2?family=Inter:wght@200;400;700&display=swap"
+          rel="stylesheet"
+        />
+      </header>
+      <Typography variant="h2">Formulário de Cadastro</Typography>
+      <FormOnboard aoEnviar={aoEnviarForm} validaCPF={validarCPF} />
+    </>
+  );
+}
