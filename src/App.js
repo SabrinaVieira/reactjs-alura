@@ -1,6 +1,8 @@
 import { Typography } from "@material-ui/core";
 import "./App.css";
 import FormOnboard from "./components/FormOnboard";
+import HeaderPage from "./components/HeaderPage";
+import FooterPage from "./components/FooterPage";
 
 function aoEnviarForm(dados) {
   console.log(dados);
@@ -25,8 +27,9 @@ export default function App() {
           rel="stylesheet"
         />
       </header>
-      <Typography variant="h2">Formulário de Cadastro</Typography>
-      <FormOnboard aoEnviar={aoEnviarForm} validaCPF={validarCPF} />
+      <HeaderPage />
+      <FormOnboard />
+      <FooterPage />
     </>
   );
 }
