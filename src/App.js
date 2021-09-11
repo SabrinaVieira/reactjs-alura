@@ -23,7 +23,7 @@ export default function App() {
         <link rel="preconnect" href="https://fonts.gstatic.com" />
         <title>Cadastro</title>
         <link
-          href="https://fonts.googleapis.com/css2?family=Inter:wght@200;400;700&display=swap"
+          href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=PT+Sans:wght@400;700&family=Roboto:wght@400;700&display=swap"
           rel="stylesheet"
         />
       </header>
